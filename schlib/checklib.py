@@ -86,12 +86,12 @@ for libfile in args.libfiles:
                     # example of customized printing feedback by checking the rule name
                     # and a specific variable of the rule
                     # note that the following text will only be printed when verbosity level is greater than 1
-                    if rule.name == 'Rule 3.1' and args.verbose > 1:
+                    if rule.name == 'Rule 3.1' and args.verbose:
                         for pin in rule.violating_pins:
                             printer.red('pin: %s (%s), posx %s, posy %s' %
                                        (pin['name'], pin['num'], pin['posx'], pin['posy']), indentation=4)
 
-                    if rule.name == 'Rule 3.2' and args.verbose > 1:
+                    if rule.name == 'Rule 3.2' and args.verbose:
                         for pin in rule.violating_pins:
                             printer.red('pin: %s (%s), length %s' %
                                        (pin['name'], pin['num'], pin['length']), indentation=4)
